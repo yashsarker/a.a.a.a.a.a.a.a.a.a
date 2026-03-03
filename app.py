@@ -7,7 +7,7 @@ import glob
 def process_movies():
     input_files = glob.glob('input*.json')
 
-    if not pool_files := input_files:
+    if not input_files:
         return
 
     scraper = cloudscraper.create_scraper()
